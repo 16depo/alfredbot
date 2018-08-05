@@ -6,7 +6,7 @@ def start(bot, update):
     depobot.send_message(chat_id=update.message.chat_id, text="Good evening, sir, do you want me to prepare some tea?")
 def sendip(bot, update):
     ipfile=open('/home/depo/externalIP', 'r')
-    ip=str(ipfile.read())
+    ip=ipfile.read()
     depobot.send_message(chat_id=update.message.chat_id, text="Home current IP is "+ip)
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
